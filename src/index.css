@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --octa-page: #0b0a0c;
+    --octa-card: #eee3f7;
+    --octa-card-lite: #f6eefb;
+    --octa-ink: #1e1526;
+    --octa-ink-soft: #57495f;
+    --octa-ink-faint: #6f6178;
+    --octa-plum: #a06cd5;
+    --octa-plum-deep: #7c4bb0;
+    --octa-plum-bright: #b78ce0;
+    --octa-rise: #147b37;
+    --octa-dip: #ad3568;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #0b0a0c;
+    color: #eee3f7;
+  }
+
+  /* Prevent any accidental horizontal scrollbar on root */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0b0a0c;
+    color: #eee3f7;
+  }
+}
+
+/* Custom styled horizontal scrollbar for data tables and charts */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1b1722;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #7c4bb0;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b78ce0;
+}
+
+/* Tabular figures for aligned scores & IDs */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
